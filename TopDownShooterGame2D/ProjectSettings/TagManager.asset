@@ -15,7 +15,7 @@ TagManager:
   - 
   - Walls
   - Player
-  - Walls2
+  - Floor
   - 
   - 
   - 
@@ -41,8 +41,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Walls
-    uniqueID: 2353837109
+  - name: Floor
+    uniqueID: 2891531305
     locked: 0
   - name: Player
     uniqueID: 3854739619
@@ -50,6 +50,6 @@ TagManager:
   - name: Enemy
     uniqueID: 4160938567
     locked: 0
-  - name: Floor
-    uniqueID: 2891531305
+  - name: Walls
+    uniqueID: 2353837109
     locked: 0
