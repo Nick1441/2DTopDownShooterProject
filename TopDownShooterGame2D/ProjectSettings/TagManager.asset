@@ -14,9 +14,9 @@ TagManager:
   - 
   - 
   - Walls
-  - Player
   - Floor
-  - 
+  - Player Health
+  - Enemy Health
   - 
   - 
   - 
