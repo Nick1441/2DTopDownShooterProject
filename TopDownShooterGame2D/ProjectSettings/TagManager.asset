@@ -17,8 +17,8 @@ TagManager:
   - Floor
   - Player Health
   - Enemy Health
-  - 
-  - 
+  - Player Damage
+  - Enemy Damage
   - 
   - 
   - 
@@ -41,15 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Walls
+    uniqueID: 2353837109
+    locked: 0
   - name: Floor
     uniqueID: 2891531305
     locked: 0
   - name: Player
     uniqueID: 3854739619
     locked: 0
+  - name: Bullets
+    uniqueID: 4189464775
+    locked: 0
   - name: Enemy
     uniqueID: 4160938567
     locked: 0
-  - name: Walls
-    uniqueID: 2353837109
+  - name: FX
+    uniqueID: 1092265951
+    locked: 0
+  - name: ForeGround
+    uniqueID: 2883838793
     locked: 0
