@@ -17,4 +17,9 @@ public class LookAtTarget : MonoBehaviour {
             transform.rotation = Quaternion.Lerp(transform.rotation, newRot, Time.deltaTime * Smoothness);
         }
 	}
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
 }

@@ -20,11 +20,7 @@ public class HealthSystem : MonoBehaviour {
 
         if (health < 1)
         {
-            //Kills The game object Instantly
-            Destroy(gameObject);
-
-            //this will be used when i want to create animation for the enemynwhen it is dead.
-            //onDie.Invoke();
+           onDie.Invoke();
         }
     }
 }
