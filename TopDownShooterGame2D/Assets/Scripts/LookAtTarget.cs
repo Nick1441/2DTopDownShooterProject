@@ -7,7 +7,7 @@ public class LookAtTarget : MonoBehaviour {
     public float Smoothness = 5.0f;
     public float AdjustmentAngle = 0.0f;
 	
-	public void Update ()
+	public void FixedUpdate ()
     {
 		if (target != null)
         {

@@ -28,7 +28,7 @@ public class Weapon1 : MonoBehaviour {
         Invoke("SetFiring", FireRate);
     }
 	
-	private void Update () {
+	private void FixedUpdate () {
         if (Input.GetMouseButton(0))
         {
             if (!isFiring)

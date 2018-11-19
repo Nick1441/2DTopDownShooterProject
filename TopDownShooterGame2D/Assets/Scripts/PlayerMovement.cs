@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
         RigidMovement.angularVelocity = 0.0f;
 
         //Creating A New Vector2, To store both the Horizontal And Vertical Movement Inputed.
-        Vector2 Movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 Movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
 
         //Making The players Velocity Dependent on The players Input, Allowing the Object To Move.
         //This is then Timed by speed, allowing the player to move faster or slower, as Speed is a Variable.

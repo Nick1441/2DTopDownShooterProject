@@ -25,11 +25,17 @@ public class GameUI : MonoBehaviour {
     private void UpdateHealthBar(int health)
     {
         healthBar.value = health;
+        healthBar.GetComponent<Animator>().Play(0);
     }
 
     private void UpdateScore(int theScore)
     {
         playerScore += theScore;
         ScoreText.text = "Score " + playerScore.ToString();
+    }
+
+    public void Start()
+    {
+        healthBar.GetComponent<Animator>().StopPlayback();
     }
 }

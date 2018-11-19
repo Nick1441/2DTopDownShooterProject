@@ -10,6 +10,13 @@ public class DialogueTrigger : MonoBehaviour {
     public void Start()
     {
         //Delays the Function from being called for 1 second.
+        Invoke("WaitTime", 0f);
+    }
+
+
+    //this is used for the pause menu, or it would open even when paused.
+    void WaitTime()
+    {
         Invoke("TriggerDialogue", 1f);
     }
 

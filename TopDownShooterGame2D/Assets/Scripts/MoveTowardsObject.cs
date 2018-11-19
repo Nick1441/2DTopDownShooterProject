@@ -7,7 +7,7 @@ public class MoveTowardsObject : MonoBehaviour {
     public Transform target;
     public float speed = 5.0f;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (target != null)
         {
