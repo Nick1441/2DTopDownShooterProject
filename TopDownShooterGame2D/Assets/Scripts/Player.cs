@@ -9,26 +9,26 @@ public class Player : MonoBehaviour {
     public static event UpdateHealth OnUpdateHealth;
 
     //this will be used when creating player Animations for firing
- //   private Animator weaponAnim;
+    private Animator weaponAnim;
 
- //   private void Start ()
- //   {
- //       weaponAnim = GetComponent<Animator>();
-	//}
-	
-	//private void Update ()
- //   {
-	//if (Input.GetMouseButton(0))
- //       {
- //           GetComponent<Animator>().SetBool("isFiring", true);
- //       }
- //   else
- //       {
- //           GetComponent<Animator>().SetBool("isFiring", false);
- //       }
-	//}
+    private void Start()
+    {
+        weaponAnim = GetComponent<Animator>();
+    }
 
-      public void SendHealthData(int health)
+    private void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            GetComponent<Animator>().SetBool("isFiring", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("isFiring", false);
+        }
+    }
+
+    public void SendHealthData(int health)
     {
         if (OnUpdateHealth != null)
         {

@@ -20,9 +20,9 @@ TagManager:
   - Player Damage
   - Enemy Damage
   - Door
-  - 
-  - 
-  - 
+  - NoEscape
+  - Wall Collision
+  - PathFinding
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: here
+    uniqueID: 2030255107
     locked: 0
   - name: Walls
     uniqueID: 2353837109
@@ -61,4 +64,7 @@ TagManager:
     locked: 0
   - name: ForeGround
     uniqueID: 2883838793
+    locked: 0
+  - name: PathFinding
+    uniqueID: 617871467
     locked: 0
