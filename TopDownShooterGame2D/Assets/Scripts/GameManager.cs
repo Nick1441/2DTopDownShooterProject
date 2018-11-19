@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
 
     public void StartStoryGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("StoryMode");
     }
 
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour {
 
     public void BackToMainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour {
 
     public void LoadMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
