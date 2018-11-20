@@ -7,6 +7,7 @@ public class GameUI : MonoBehaviour {
 
     public Slider healthBar;
     public Text ScoreText;
+    private Animator DamgedBar;
 
     public int playerScore = 0;
 
@@ -25,7 +26,13 @@ public class GameUI : MonoBehaviour {
     private void UpdateHealthBar(int health)
     {
         healthBar.value = health;
-        healthBar.GetComponent<Animator>().Play(0);
+        healthBar.GetComponent<Animator>().SetBool("ifDamage", true);
+        Invoke("OffDamage", 0.5f);
+    }
+
+    private void OffDamage()
+    {
+        healthBar.GetComponent<Animator>().SetBool("ifDamage", false);
     }
 
     private void UpdateScore(int theScore)
@@ -34,13 +41,13 @@ public class GameUI : MonoBehaviour {
         ScoreText.text = "SCORE : " + playerScore.ToString();
     }
 
-    public void Start()
-    {
-        healthBar.GetComponent<Animator>().StopPlayback();
-    }
-
     public void FixedUpdate()
     {
         PlayerPrefs.SetString("Player Score", ScoreText.text);
+    }
+
+    private void Start()
+    {
+        DamgedBar = healthBar.GetComponent<Animator>();
     }
 }
