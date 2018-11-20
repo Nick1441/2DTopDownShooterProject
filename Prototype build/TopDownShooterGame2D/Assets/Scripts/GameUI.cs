@@ -31,11 +31,16 @@ public class GameUI : MonoBehaviour {
     private void UpdateScore(int theScore)
     {
         playerScore += theScore;
-        ScoreText.text = "Score " + playerScore.ToString();
+        ScoreText.text = "SCORE : " + playerScore.ToString();
     }
 
     public void Start()
     {
         healthBar.GetComponent<Animator>().StopPlayback();
+    }
+
+    public void FixedUpdate()
+    {
+        PlayerPrefs.SetString("Player Score", ScoreText.text);
     }
 }

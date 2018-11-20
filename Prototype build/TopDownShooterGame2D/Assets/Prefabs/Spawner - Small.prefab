@@ -20,11 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4738994102993220}
   - component: {fileID: 114402138562164252}
-  - component: {fileID: 114925928011423728}
+  - component: {fileID: 114411583236517896}
   - component: {fileID: 212124339982958754}
   - component: {fileID: 58990479904327518}
-  - component: {fileID: 114158291288530302}
-  - component: {fileID: 114336535683730362}
   m_Layer: 0
   m_Name: Spawner - Small
   m_TagString: Untagged
@@ -38,9 +36,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1737082175456270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.74, y: -17.91, z: 0.07949007}
-  m_LocalScale: {x: 5.435428, y: 5.677503, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 42.36, y: 29.03, z: 0.07949007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,50 +58,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114158291288530302
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1737082175456270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f39f7406276e8a4d8341c566f5aea32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  onDie:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114336535683730362}
-        m_MethodName: Die
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onDamaged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &114336535683730362
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1737082175456270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e1ce77e152c3b8448a3f5e651b7d3eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114402138562164252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,12 +69,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6b5984466edcf4aba7b828af366fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 4
+  time: 7
   repeat: 1
   onTimerComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114925928011423728}
+      - m_Target: {fileID: 114411583236517896}
         m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
@@ -133,7 +87,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114925928011423728
+--- !u!114 &114411583236517896
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -141,11 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1737082175456270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0c5a136c2e9a9f41b0af5cd05df689b, type: 3}
+  m_Script: {fileID: 11500000, guid: cee0e99b68eb8754b89fff43ca2a3bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 1283311868887976, guid: be06f4fc67b47284fb7787507dadb75d, type: 2}
-  adjustmentAngle: 270
+  Prefab: {fileID: 1614872635192400, guid: 10336c73011d2744db8a989e6b69d98c, type: 2}
+  adjustmentAngle: 0
 --- !u!212 &212124339982958754
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -181,7 +135,7 @@ SpriteRenderer:
   m_SortingLayerID: -134028729
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: a60cfff3bf28d8e488971948cee12d91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

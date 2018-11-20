@@ -16,7 +16,7 @@ public class MusicFadeIn : MonoBehaviour
 
     private void Update()
     {
-        if (m_AudioSource.volume < 0.2)
+        if (m_AudioSource.volume < 0.05)
         {
             m_AudioSource.volume = m_AudioSource.volume + (Time.deltaTime / (m_FadeInTime + 1));
         }

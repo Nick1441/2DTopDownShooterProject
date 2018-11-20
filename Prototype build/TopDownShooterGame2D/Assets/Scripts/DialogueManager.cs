@@ -44,6 +44,12 @@ public class DialogueManager : MonoBehaviour {
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        Invoke("WaitTime", 7f);
+    }
+
+    public void WaitTime()
+    {
+        DisplayNextSentence();
     }
 
     IEnumerator TypeSentence (string sentence)

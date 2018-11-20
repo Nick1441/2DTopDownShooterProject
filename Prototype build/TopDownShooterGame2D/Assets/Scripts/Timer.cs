@@ -12,7 +12,12 @@ public class Timer : MonoBehaviour {
 
 	private void Start ()
     {
-		if (repeat)
+        Invoke("SetRepeatingWait", 20f);
+	}
+
+    public void SetRepeatingWait()
+    {
+        if (repeat)
         {
             InvokeRepeating("OnTimerComplete", 0, time);
         }
@@ -20,7 +25,7 @@ public class Timer : MonoBehaviour {
         {
             Invoke("OnTimerComplete", time);
         }
-	}
+    }
 	
     private void OnTimerComplete()
     {

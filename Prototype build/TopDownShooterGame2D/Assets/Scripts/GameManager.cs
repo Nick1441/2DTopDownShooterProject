@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour {
 
     public void EndGame()
     {
-        SceneManager.LoadScene("GameOverScene");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("EndScreen");
     }
 
     public void BackToMainMenu()
