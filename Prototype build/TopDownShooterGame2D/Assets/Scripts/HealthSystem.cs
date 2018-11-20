@@ -5,12 +5,16 @@ using UnityEngine.Events;
 
 [System.Serializable]
 public class OnDamagedEvent : UnityEvent<int> { }
+[System.Serializable]
+public class OnHealEvent : UnityEvent<int> { }
+
 
 public class HealthSystem : MonoBehaviour {
 
     public int health = 100;
     public UnityEvent onDie;
     public OnDamagedEvent onDamaged;
+    public OnHealEvent HealthPack;
 
     public void TakeDamage (int damage)
     {
@@ -21,6 +25,26 @@ public class HealthSystem : MonoBehaviour {
         if (health < 1)
         {
            onDie.Invoke();
+        }
+        else if (health > 100)
+        {
+            health = 100;
+        }
+    }
+
+    public void TakeHealth(int heal)
+    {
+        health += heal;
+
+        HealthPack.Invoke(health);
+
+        if (health < 1)
+        {
+            onDie.Invoke();
+        }
+        else if (health > 100)
+        {
+            health = 100;
         }
     }
 }
