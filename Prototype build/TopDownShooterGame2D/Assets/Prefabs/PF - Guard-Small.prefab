@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  resetTime: 0.5
+  resetTime: 1
 --- !u!114 &114590197613769362
 MonoBehaviour:
   m_ObjectHideFlags: 1
