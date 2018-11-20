@@ -361,10 +361,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  HealthPack:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnHealEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!212 &212208929582831106
 SpriteRenderer:
   m_ObjectHideFlags: 1

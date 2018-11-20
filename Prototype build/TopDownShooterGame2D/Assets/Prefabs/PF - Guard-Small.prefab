@@ -173,7 +173,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  speed: 3
+  speed: 5
   orientation: 1
   enableRotation: 1
   rotationSpeed: 10
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  resetTime: 1
+  resetTime: 3
 --- !u!114 &114590197613769362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -285,10 +285,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  HealthPack:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnHealEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114772049033119130
 MonoBehaviour:
   m_ObjectHideFlags: 1

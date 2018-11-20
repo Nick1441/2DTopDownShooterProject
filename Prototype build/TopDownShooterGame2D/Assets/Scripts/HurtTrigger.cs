@@ -12,12 +12,14 @@ public class HurtTrigger : MonoBehaviour {
         collision.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<CircleCollider2D>().enabled = false;
-        Invoke("ResetTrigger", resetTime);
+        Invoke("ResetTrigger", resetTime);
+
     }
 
     private void ResetTrigger()
     {
         GetComponent<BoxCollider2D>().enabled = true;
         GetComponent<CircleCollider2D>().enabled = true;
-    }
+    }
+
 }

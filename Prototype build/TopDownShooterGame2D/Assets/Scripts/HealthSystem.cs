@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 [System.Serializable]
 public class OnDamagedEvent : UnityEvent<int> { }
-[System.Serializable]
-public class OnHealEvent : UnityEvent<int> { }
 
 
 public class HealthSystem : MonoBehaviour {
@@ -14,7 +12,6 @@ public class HealthSystem : MonoBehaviour {
     public int health = 100;
     public UnityEvent onDie;
     public OnDamagedEvent onDamaged;
-    public OnHealEvent HealthPack;
 
     public void TakeDamage (int damage)
     {
