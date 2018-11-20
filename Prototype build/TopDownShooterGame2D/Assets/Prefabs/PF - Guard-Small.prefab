@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 4022602413290784}
   - component: {fileID: 114450575731933484}
   - component: {fileID: 58884974639854244}
-  m_Layer: 13
+  m_Layer: 19
   m_Name: Hurt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,6 +285,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  HealthPack:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnHealEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &114772049033119130
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -701,11 +701,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114421769747421912, guid: 10336c73011d2744db8a989e6b69d98c,
-        type: 2}
-      propertyPath: resetTime
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10336c73011d2744db8a989e6b69d98c, type: 2}
   m_IsPrefabParent: 0
@@ -952,6 +947,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4562595318924274, guid: 8666e8de530d9614787bda578ef78110, type: 2}
       propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114450575731933484, guid: 8666e8de530d9614787bda578ef78110,
+        type: 2}
+      propertyPath: resetTime
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -21533,7 +21533,37 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1737470503724196, guid: d995433304469a0448cbbfe720c8f1ce, type: 2}
+      propertyPath: m_Layer
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 61525557461106360, guid: d995433304469a0448cbbfe720c8f1ce,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0151758045
+      objectReference: {fileID: 0}
+    - target: {fileID: 61525557461106360, guid: d995433304469a0448cbbfe720c8f1ce,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.4919782
+      objectReference: {fileID: 0}
+    - target: {fileID: 61525557461106360, guid: d995433304469a0448cbbfe720c8f1ce,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.096169725
+      objectReference: {fileID: 0}
+    - target: {fileID: 61525557461106360, guid: d995433304469a0448cbbfe720c8f1ce,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.38192132
+      objectReference: {fileID: 0}
+    - target: {fileID: 114789101876102604, guid: d995433304469a0448cbbfe720c8f1ce,
+        type: 2}
+      propertyPath: resetTime
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 61536786954296514, guid: d995433304469a0448cbbfe720c8f1ce, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d995433304469a0448cbbfe720c8f1ce, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &831083324
