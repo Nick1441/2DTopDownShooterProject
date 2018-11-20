@@ -31,20 +31,4 @@ public class HealthSystem : MonoBehaviour {
             health = 100;
         }
     }
-
-    public void TakeHealth(int heal)
-    {
-        health += heal;
-
-        HealthPack.Invoke(health);
-
-        if (health < 1)
-        {
-            onDie.Invoke();
-        }
-        else if (health > 100)
-        {
-            health = 100;
-        }
-    }
 }
