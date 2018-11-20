@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 4022602413290784}
   - component: {fileID: 114450575731933484}
   - component: {fileID: 58884974639854244}
+  - component: {fileID: 61947519292646970}
   m_Layer: 19
   m_Name: Hurt
   m_TagString: Untagged
@@ -113,9 +114,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.35}
+  m_Offset: {x: 0, y: 0.38}
   serializedVersion: 2
-  m_Radius: 0.73
+  m_Radius: 0.67
 --- !u!58 &58884974639854244
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -131,6 +132,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.75}
   serializedVersion: 2
   m_Radius: 0.73
+--- !u!61 &61947519292646970
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995116012135864}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1158102, y: 0.7790656}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.36831537, y: 0.9157944}
+  m_EdgeRadius: 0
 --- !u!114 &114132995410854532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  resetTime: 3
+  resetTime: 2
 --- !u!114 &114590197613769362
 MonoBehaviour:
   m_ObjectHideFlags: 1
