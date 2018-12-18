@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon1 : MonoBehaviour {
 
     public GameObject bulletPrefab;
-    public Transform bulletSpawn;
+    public Transform[] bulletSpawn;
     public float FireRate = 1.0f;
 
     private bool isFiring = false;
@@ -18,7 +18,12 @@ public class Weapon1 : MonoBehaviour {
     private void Fire()
     {
         isFiring = true;
-        Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+
+        for (int i = 0; i < bulletSpawn.Length; i++)
+        {
+            Instantiate(bulletPrefab, bulletSpawn[i].position, bulletSpawn[i].rotation);
+        }
+        //Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
         if (GetComponent<AudioSource>() != null)
         {

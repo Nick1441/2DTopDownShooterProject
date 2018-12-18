@@ -7,13 +7,13 @@ public class invincibility : MonoBehaviour {
     public float InvinvabilityTime = 5;
 
 	void Start () {
-        transform.GetComponent<CircleCollider2D>().enabled = false;
+        transform.GetComponent<Collider2D>().enabled = false;
         Invoke("TimeOut", InvinvabilityTime);
     }
 
     void TimeOut()
     {
-        transform.GetComponent<CircleCollider2D>().enabled = true;
+        transform.GetComponent<Collider2D>().enabled = true;
         Destroy(this);
     }
 }
