@@ -17,14 +17,14 @@ public class Timer : MonoBehaviour {
 
     public void SetRepeatingWait()
     {
-        if (repeat)
-        {
-            InvokeRepeating("OnTimerComplete", 0, time);
-        }
-        else
-        {
-            Invoke("OnTimerComplete", time);
-        }
+            if (repeat)
+            {
+                InvokeRepeating("OnTimerComplete", 0, time);
+            }
+            else
+            {
+                Invoke("OnTimerComplete", time);
+            }
     }
 	
     private void OnTimerComplete()

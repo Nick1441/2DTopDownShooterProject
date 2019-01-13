@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - EnemyNormal
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,9 @@ TagManager:
     locked: 0
   - name: Floor
     uniqueID: 2891531305
+    locked: 0
+  - name: Trees/Shadow
+    uniqueID: 2292280737
     locked: 0
   - name: Bullets
     uniqueID: 4189464775

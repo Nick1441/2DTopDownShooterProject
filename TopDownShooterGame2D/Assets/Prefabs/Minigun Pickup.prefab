@@ -80,8 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6372731784e22f443836e0c36f25a71f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1569657551756618, guid: 6152e47652022c642b959b9e19ada545,
+  bulletPrefab: {fileID: 1569657551756618, guid: 2045dbb54ff037547a79a0cc43c11b04,
     type: 2}
   bulletSpawn:
   - {fileID: 4959058468313786}
-  FireRate: 0.1
+  FireRate: 0.2

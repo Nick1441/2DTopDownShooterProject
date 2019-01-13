@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponManager : MonoBehaviour
 {
+
+    public Text WeaponSelected;
+
     void Start()
     {
         ChangeWeapon(0);
+        WeaponSelected.enabled = false;
     }
 
     public void ChangeWeapon(int index)
@@ -32,6 +37,8 @@ public class WeaponManager : MonoBehaviour
         GameObject weapon = Instantiate(prefab, transform.position, transform.rotation, transform);
 
         ChangeWeapon(weapon.transform.GetSiblingIndex());
+        WeaponSelected.enabled = true;
+        WeaponSelected.text = "Weapon - 1";
     }
 
     private void Update()
@@ -39,16 +46,19 @@ public class WeaponManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ChangeWeapon(0);
+            WeaponSelected.text = "Weapon - 1";
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             ChangeWeapon(1);
+            WeaponSelected.text = "Weapon - 2";
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             ChangeWeapon(2);
+            WeaponSelected.text = "Weapon - 3";
         }
     }
 }

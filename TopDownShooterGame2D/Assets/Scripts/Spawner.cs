@@ -9,10 +9,10 @@ public class Spawner : MonoBehaviour {
 
     public void Spawn()
     {
-        Vector3 rotationInDegrees = transform.eulerAngles;
-        rotationInDegrees.z += adjustmentAngle;
+            Vector3 rotationInDegrees = transform.eulerAngles;
+            rotationInDegrees.z += adjustmentAngle;
 
-        Quaternion rotationInRadians = Quaternion.Euler(rotationInDegrees);
-        Instantiate(Prefab, transform.position, rotationInRadians);
+            Quaternion rotationInRadians = Quaternion.Euler(rotationInDegrees);
+            Instantiate(Prefab, transform.position, rotationInRadians);
     }
 }
