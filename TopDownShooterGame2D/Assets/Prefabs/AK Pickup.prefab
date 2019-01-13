@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4769623235476184}
   - component: {fileID: 114019724590263326}
   m_Layer: 18
-  m_Name: Pistol Weapon
+  m_Name: AK Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
