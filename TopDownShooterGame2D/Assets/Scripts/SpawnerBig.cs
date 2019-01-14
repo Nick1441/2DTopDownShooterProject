@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour {
+public class SpawnerBig : MonoBehaviour {
 
     public GameObject Prefab;
     public float adjustmentAngle = 0;
 
     public int SpawnAllowed = 0;
-    private int EnemyNormalAmount = 0;
+    private int EnemyBigAmount = 0;
 
     public void Update()
     {
-        EnemyNormalAmount = GameObject.FindGameObjectsWithTag("EnemyNormal").Length;
+        EnemyBigAmount = GameObject.FindGameObjectsWithTag("EnemyBig").Length;
     }
 
     public void EnemyLimit()
     {
-        if (EnemyNormalAmount < SpawnAllowed)
+        if (EnemyBigAmount < SpawnAllowed)
         {
             Spawn();
         }

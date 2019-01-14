@@ -35,7 +35,7 @@ GameObject:
   - component: {fileID: 95573912142533738}
   m_Layer: 13
   m_Name: PF - Guard-Big
-  m_TagString: Untagged
+  m_TagString: EnemyBig
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

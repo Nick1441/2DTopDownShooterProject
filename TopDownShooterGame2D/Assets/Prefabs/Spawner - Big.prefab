@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4799910593099792}
   - component: {fileID: 114885028384984686}
-  - component: {fileID: 114788059366138788}
+  - component: {fileID: 114047151754218358}
   - component: {fileID: 212337723282231908}
   - component: {fileID: 58849639795805946}
   m_Layer: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1730235513856446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.81, y: 15.49, z: 0}
+  m_LocalPosition: {x: -53.648067, y: -17.08878, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +58,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114788059366138788
+--- !u!114 &114047151754218358
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -66,11 +66,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1730235513856446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee0e99b68eb8754b89fff43ca2a3bb5, type: 3}
+  m_Script: {fileID: 11500000, guid: f52e0bc1c48ca3440adda86b14e8defe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1714278645330260, guid: d995433304469a0448cbbfe720c8f1ce, type: 2}
   adjustmentAngle: 0
+  SpawnAllowed: 4
 --- !u!114 &114885028384984686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,13 +83,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6b5984466edcf4aba7b828af366fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 18
+  time: 10
   repeat: 1
   onTimerComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114788059366138788}
-        m_MethodName: Spawn
+      - m_Target: {fileID: 114047151754218358}
+        m_MethodName: EnemyLimit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

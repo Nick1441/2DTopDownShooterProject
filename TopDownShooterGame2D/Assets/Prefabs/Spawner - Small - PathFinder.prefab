@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4693264394621018}
   - component: {fileID: 114973692591150912}
-  - component: {fileID: 114981630906131904}
+  - component: {fileID: 114508563608038362}
   - component: {fileID: 212808177246631608}
   - component: {fileID: 58772751311425344}
   m_Layer: 8
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1296638429086160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 23.02, z: 0.07949007}
+  m_LocalPosition: {x: -17.26, y: 40.52, z: 0.07949007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,6 +58,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114508563608038362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1296638429086160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865f04c945934a428d6112914e51586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 1839631733852746, guid: 8666e8de530d9614787bda578ef78110, type: 2}
+  adjustmentAngle: 0
+  SpawnAllowed: 4
 --- !u!114 &114973692591150912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,8 +88,8 @@ MonoBehaviour:
   onTimerComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114981630906131904}
-        m_MethodName: Spawn
+      - m_Target: {fileID: 114508563608038362}
+        m_MethodName: EnemyLimit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -87,19 +101,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114981630906131904
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296638429086160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee0e99b68eb8754b89fff43ca2a3bb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Prefab: {fileID: 1839631733852746, guid: 8666e8de530d9614787bda578ef78110, type: 2}
-  adjustmentAngle: 0
 --- !u!212 &212808177246631608
 SpriteRenderer:
   m_ObjectHideFlags: 1
