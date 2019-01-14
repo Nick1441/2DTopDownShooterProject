@@ -44,6 +44,7 @@ public class GameUI : MonoBehaviour {
     public void FixedUpdate()
     {
         PlayerPrefs.SetString("Player Score", ScoreText.text);
+        PlayerPrefs.SetInt("Score", playerScore);
     }
 
     private void Start()
