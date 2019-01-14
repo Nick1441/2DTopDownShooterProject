@@ -232,8 +232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 0}
-  MainMenuHightScoreText: {fileID: 681595209}
-  MainMenuHightScoreText2: {fileID: 295141305}
 --- !u!224 &198346803
 RectTransform:
   m_ObjectHideFlags: 0
@@ -268,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &295141305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,7 +566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &681595208
 RectTransform:
   m_ObjectHideFlags: 0
