@@ -20,10 +20,12 @@ public class PickUps : MonoBehaviour {
             //Sending Health To The Player, Healing Them...
             case PickUpSelect.Health:
                 other.transform.SendMessage("TakeDamage", -HealAmount, SendMessageOptions.DontRequireReceiver);
+                other.transform.SendMessage("HealedPlayerEnable", SendMessageOptions.DontRequireReceiver);
                 break;
 
             case PickUpSelect.invincibility:
                 other.gameObject.AddComponent<invincibility>();
+                other.transform.SendMessage("InvPlayerEnable", SendMessageOptions.DontRequireReceiver);
                 break;
 
             default:

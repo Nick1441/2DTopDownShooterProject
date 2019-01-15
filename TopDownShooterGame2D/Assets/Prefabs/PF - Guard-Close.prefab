@@ -49,6 +49,8 @@ GameObject:
   - component: {fileID: 114670788205263942}
   - component: {fileID: 114694675199432040}
   - component: {fileID: 114620393241987564}
+  - component: {fileID: 95729066546109064}
+  - component: {fileID: 114451677589718442}
   m_Layer: 13
   m_Name: PF - Guard-Close
   m_TagString: EnemyNormal
@@ -76,7 +78,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614872635192400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.075432, y: -17.941952, z: 0}
+  m_LocalPosition: {x: 13.19, y: 32.48, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4035022318689146}
@@ -94,7 +96,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.1
   m_GravityScale: 0
@@ -183,6 +185,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.119823575, y: 0.5385389}
   m_EdgeRadius: 0
+--- !u!95 &95729066546109064
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614872635192400}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e69c7b658f62d024dbbd10c8d23cd917, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114037261862600762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,7 +287,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  resetTime: 3
+  resetTime: 2
+--- !u!114 &114451677589718442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614872635192400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4c8dea29be08f43b502769913663f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 1043033973842764, guid: a29e227dc27078c4e8f5b924af8aeab8,
+    type: 2}
+  adjustmentAngle: 0
 --- !u!114 &114620393241987564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -343,6 +377,17 @@ MonoBehaviour:
   onDie:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 114451677589718442}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 114290620019980338}
         m_MethodName: Die
         m_Mode: 1
@@ -358,7 +403,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onDamaged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114732676232174774}
+        m_MethodName: OnDamagedAniNormal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: OnDamagedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!212 &212208929582831106

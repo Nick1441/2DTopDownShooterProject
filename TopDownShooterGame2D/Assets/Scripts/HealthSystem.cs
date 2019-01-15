@@ -13,6 +13,40 @@ public class HealthSystem : MonoBehaviour {
     public UnityEvent onDie;
     public OnDamagedEvent onDamaged;
 
+    //Big Enemy Dammage Animation On Damaged
+    public void OnDamagedAni()
+    {
+        GetComponent<Animator>().SetBool("isEnDam", true);
+        Invoke("OnDamagedAniRes", 0.1f);
+    }
+    public void OnDamagedAniRes()
+    {
+        GetComponent<Animator>().SetBool("isEnDam", false);
+    }
+
+    //Normal Enemy Animation On Damaged
+    public void OnDamagedAniNormal()
+    {
+        GetComponent<Animator>().SetBool("isEnDamNormal", true);
+        Invoke("OnDamagedAniResNormal", 0.1f);
+    }
+    public void OnDamagedAniResNormal()
+    {
+        GetComponent<Animator>().SetBool("isEnDamNormal", false);
+    }
+
+    //Small Enemy Animation on Damaged
+    public void OnDamagedAniSmall()
+    {
+        GetComponent<Animator>().SetBool("isEnDamSmall", true);
+        Invoke("OnDamagedAniResSmall", 0.1f);
+    }
+    public void OnDamagedAniResSmall()
+    {
+        GetComponent<Animator>().SetBool("isEnDamSmall", false);
+    }
+
+
     public void TakeDamage (int damage)
     {
         health -= damage;
