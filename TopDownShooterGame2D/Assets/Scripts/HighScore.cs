@@ -14,11 +14,13 @@ public class HighScore : MonoBehaviour {
     public HighScores highScore;
     private int totalHighScores = 5;
 
+    //Getting the player prefs set at the end of the arcade mode.
     public void Start()
     {
         int score = PlayerPrefs.GetInt("Score");
         string s = PlayerPrefs.GetString("HighScores");
 
+        //checking fdor highscores already entered.
         if (string.IsNullOrEmpty(s))
         {
             highScore = new HighScores();
@@ -29,6 +31,7 @@ public class HighScore : MonoBehaviour {
             highScore = JsonUtility.FromJson<HighScores>(s);
         }
 
+        //Organising Highscores into order.
         if (highScore.scores.Count < totalHighScores)
         {
             int amount = totalHighScores - highScore.scores.Count;
@@ -38,6 +41,7 @@ public class HighScore : MonoBehaviour {
             }
         }
 
+        //Putting highscore into correct place.
         if (score > highScore.scores[totalHighScores - 1])
         {
             highScore.scores[totalHighScores - 1] = score;
@@ -60,6 +64,7 @@ public class HighScore : MonoBehaviour {
             }
         }
 
+        //Setting the JSON file with all highscore entered.
         string scoresJSON = JsonUtility.ToJson(highScore);
         PlayerPrefs.SetString("HighScores", scoresJSON);
     }

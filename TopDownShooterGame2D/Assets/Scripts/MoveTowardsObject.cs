@@ -7,6 +7,7 @@ public class MoveTowardsObject : MonoBehaviour {
     public Transform target;
     public float speed = 5.0f;
 
+    //Find the target (PLayer) and will towards them.
     private void FixedUpdate()
     {
         if (target != null)
@@ -15,6 +16,7 @@ public class MoveTowardsObject : MonoBehaviour {
         }
     }
 
+    //Setting the target to go to.
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;

@@ -18,6 +18,7 @@ public class Player : MonoBehaviour {
         weaponAnim = GetComponent<Animator>();
     }
 
+    //Checks for mouse input and sets Bool to True. Plays firing animation. If mouse is not down, doesnt play animation.
     private void Update()
     {
         if (Input.GetMouseButton(0))
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour {
         }
     }
 
+    //Sends health data to Health System.
     public void SendHealthData(int health)
     {
         if (OnUpdateHealth != null)
@@ -38,6 +40,7 @@ public class Player : MonoBehaviour {
         }
     }
 
+    //Plays invincability Animation, waits 5 seconds, Calls to Stop animation.
     public void InvPlayerEnable()
     {
         GetComponent<Animator>().SetBool("isInv", true);
@@ -49,6 +52,7 @@ public class Player : MonoBehaviour {
         GetComponent<Animator>().SetBool("isInv", false);
     }
 
+    //Plays Healing Animation, then call method to stop animation.
     public void HealedPlayerEnable()
     {
         GetComponent<Animator>().SetBool("isHeal", true);
@@ -60,6 +64,7 @@ public class Player : MonoBehaviour {
         GetComponent<Animator>().SetBool("isHeal", false);
     }
 
+    //When recieves message, plays Damaged animation. After calls antoher method to stop.
     public void DamagePlayerEnable()
     {
         GetComponent<Animator>().SetBool("isDama", true);

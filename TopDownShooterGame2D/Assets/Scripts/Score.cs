@@ -9,6 +9,7 @@ public class Score : MonoBehaviour {
 
     public int TheScore = 10;
 
+    //Used to Determine how much an enemies Score is.
     private void OnDestroy()
     {
         if(OnSendScore != null)

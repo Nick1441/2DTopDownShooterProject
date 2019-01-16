@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour {
 
     public EnemySpawnedEvent onSpawn;
 
+    //find players place by tag. Uses it for enemies to go to after spawn.
     private void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");

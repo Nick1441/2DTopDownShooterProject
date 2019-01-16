@@ -41,12 +41,15 @@ public class HealthSystem : MonoBehaviour {
         GetComponent<Animator>().SetBool("isEnDamSmall", true);
         Invoke("OnDamagedAniResSmall", 0.1f);
     }
+
+    //Setting damage Animation onto Small Enemy
     public void OnDamagedAniResSmall()
     {
         GetComponent<Animator>().SetBool("isEnDamSmall", false);
     }
 
-
+    //Used for dealing with damage and taking it off player health.
+    //If they have no health.Kills enemy or if player dies moves into End Game Scene.
     public void TakeDamage (int damage)
     {
         health -= damage;

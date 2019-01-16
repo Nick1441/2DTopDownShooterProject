@@ -8,12 +8,14 @@ public class WeaponManager : MonoBehaviour
 
     public Text WeaponSelected;
 
+    //Sets user to weapon 1, does not enable multi weapon carry.
     void Start()
     {
         ChangeWeapon(0);
         WeaponSelected.enabled = false;
     }
 
+    //Changes weapon when weapon is picked Up. Adds to array in next available slot.
     public void ChangeWeapon(int index)
     {
         if (index < transform.childCount)
@@ -32,6 +34,7 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
+    //Adds weapon to array.
     public void AddWeapon(GameObject prefab)
     {
         GameObject weapon = Instantiate(prefab, transform.position, transform.rotation, transform);
@@ -41,6 +44,7 @@ public class WeaponManager : MonoBehaviour
         WeaponSelected.text = "Weapon - 1";
     }
 
+    //Checks for key press to select specific weapons.
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))

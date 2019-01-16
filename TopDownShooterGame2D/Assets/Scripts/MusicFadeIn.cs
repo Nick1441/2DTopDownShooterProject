@@ -7,13 +7,13 @@ public class MusicFadeIn : MonoBehaviour
     private int m_FadeInTime = 10;
     private AudioSource m_AudioSource;
 
-
+    //Fades Music in on game startup
     private void Awake()
     {
         m_AudioSource = GetComponent<AudioSource>();
     }
 
-
+    //Updates volume going up over time.
     private void Update()
     {
         if (m_AudioSource.volume < 0.05)

@@ -15,6 +15,7 @@ public class Weapon1 : MonoBehaviour {
         isFiring = false;
     }
     
+    //Fires the weapon when the Mouse is clicked, (Known by a Bool)
     private void Fire()
     {
         isFiring = true;
@@ -23,8 +24,7 @@ public class Weapon1 : MonoBehaviour {
         {
             Instantiate(bulletPrefab, bulletSpawn[i].position, bulletSpawn[i].rotation);
         }
-        //Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-
+        //Plays Sound if Object has Component.
         if (GetComponent<AudioSource>() != null)
         {
             GetComponent<AudioSource>().Play();
@@ -33,6 +33,7 @@ public class Weapon1 : MonoBehaviour {
         Invoke("SetFiring", FireRate);
     }
 	
+    //Checks for updates pressing the fire Button.
 	private void FixedUpdate () {
         if (Input.GetMouseButton(0))
         {

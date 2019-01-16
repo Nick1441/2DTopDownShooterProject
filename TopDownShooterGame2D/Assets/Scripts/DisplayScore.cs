@@ -8,7 +8,8 @@ public class DisplayScore : MonoBehaviour {
 
     public Text ScoreText;
 
-	// Use this for initialization
+	//Displays score when the game is over. useses Player Prefs to store score.
+    //Sets overall Score to Overall Score text.
 	void Start () {
         string OverallScore;
         OverallScore = PlayerPrefs.GetString("Player Score");

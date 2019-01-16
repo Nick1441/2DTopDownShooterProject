@@ -7,6 +7,7 @@ public class LookAtTarget : MonoBehaviour {
     public float Smoothness = 5.0f;
     public float AdjustmentAngle = 0.0f;
 	
+    //Finds the players Location, Finds current lcoation of enemy and works what direction the player is in.
 	public void FixedUpdate ()
     {
 		if (target != null)
@@ -18,6 +19,7 @@ public class LookAtTarget : MonoBehaviour {
         }
 	}
 
+    //Sets new Target of the transform location of User Selected Target.
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;

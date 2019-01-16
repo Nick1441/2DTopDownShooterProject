@@ -9,11 +9,13 @@ public class EnemyPathFinder : MonoBehaviour {
     public Transform target;
     private IAstarAI ai;
 
+    //Setting components up.
 	private void Start ()
     {
         ai = GetComponent<IAstarAI>();
 	}
-
+    
+    //Updates enemies destination to the player every second.
     private void FixedUpdate ()
     {
 		if (target != null && ai != null)
@@ -23,6 +25,7 @@ public class EnemyPathFinder : MonoBehaviour {
         }
 	}
 
+    //Setting target for enemies to follow.
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;

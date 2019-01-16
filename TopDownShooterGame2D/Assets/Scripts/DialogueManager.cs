@@ -5,17 +5,21 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
 
+    //Seting all the variables for which text box and Dialog Text Boxes to use.
     public Text nameText;
     public Text dialogueText;
 
+    //Getting the animator component for switching inbetween text.
     public Animator animator;
 
     private Queue<string> sentences;
 
+    //Queues all sentances the user wants. 
 	void Start () {
         sentences = new Queue<string>();
     }
 	
+    //Sets dialog box to active. moving it onto the screen. Displays first sentance.
     public void StartDialogue(Dialogue dialogue)
     {
 
@@ -32,6 +36,7 @@ public class DialogueManager : MonoBehaviour {
         DisplayNextSentence();
     }
 
+    //Displays next Dialog until all sentances queued have been used.
     public void DisplayNextSentence()
     {
         if (sentences.Count == 0)
@@ -47,6 +52,7 @@ public class DialogueManager : MonoBehaviour {
         Invoke("WaitTime", 7f);
     }
 
+    //Automatic going through sentences, waits 7 seconds before displaying next one.
     public void WaitTime()
     {
         DisplayNextSentence();
@@ -63,8 +69,9 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
-        public void EndDialogue()
-        {
+    //Closes dialog box by moving it off of the screen.
+    public void EndDialogue()
+    {
         animator.SetBool("IsOpen", false);
     }
 }
