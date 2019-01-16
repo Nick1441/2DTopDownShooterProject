@@ -27,3 +27,5 @@ __External Assests Used__<br />
 - [Brackeys](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA) For Section Of Dialogue Script.
 - [A* Path Finding](https://arongranberg.com/astar/) For Path Finding Scripts.
 - [Dafont](https://www.dafont.com/6809-chargen.font) For Game Text Font.
+- [Sound Dogs](https://retired.sounddogs.com) For The Ak/Minigun Sound Effect.
+- [Sound Bible](http://soundbible.com/) For Game Text Font.
