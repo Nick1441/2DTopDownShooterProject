@@ -10,6 +10,8 @@ public enum PickUpSelect
 
 public class PickUps : MonoBehaviour {
 
+    //Sets the type to a pickup item.
+    //Says how much healing a health pack will do.
     public PickUpSelect PickupType;
     public int HealAmount = 10;
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour {
 
+    //setting the variables, overall scores.
     public delegate void SendScore(int TheScore);
     public static event SendScore OnSendScore;
 

@@ -35,6 +35,7 @@ public class WeaponManager : MonoBehaviour
     }
 
     //Adds weapon to array.
+
     public void AddWeapon(GameObject prefab)
     {
         GameObject weapon = Instantiate(prefab, transform.position, transform.rotation, transform);
@@ -45,6 +46,7 @@ public class WeaponManager : MonoBehaviour
     }
 
     //Checks for key press to select specific weapons.
+    //Listens for users keypresses.
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))

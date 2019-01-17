@@ -7,6 +7,7 @@ public class WeaponPickup : MonoBehaviour
     public GameObject weaponPrefab;
 
     //On Colision, adds Picked up weapon to Component, "Weapon Manager".
+    //used when collecting weapon to add into the array.
     private void OnTriggerEnter2D(Collider2D other)
     {
         WeaponManager weaponManager = other.gameObject.GetComponentInChildren<WeaponManager>();
