@@ -29,3 +29,4 @@ __External Assests Used__<br />
 - [Dafont](https://www.dafont.com/6809-chargen.font) For Game Text Font.
 - [Sound Dogs](https://retired.sounddogs.com) For The Ak/Minigun Sound Effect.
 - [Sound Bible](http://soundbible.com/) For Game Text Font.
+- [Gloss Land](https://glossland.ru/reaktor-productions/) For YouTube Trailer Music.
